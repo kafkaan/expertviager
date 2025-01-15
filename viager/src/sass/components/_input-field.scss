@@ -1,0 +1,21 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: start;
+
+    &__input {
+        padding: 2rem;
+        border: 1px solid $brown-secondary;
+        border-radius: 1rem;
+        font-size: 1.6rem;
+        background-color: $brown-tertiary;
+        transition: all 0.3s;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+            border: 2px solid $brown-primary;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.form-contact {
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include respond(tab-port) {
+    padding: 5rem 10rem;
+  }
+
+
+  &__title {
+    font-family: "KoHo", serif;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    &__personal-info {
+      display: grid;
+      gap: 2rem;
+      //2 columns
+      grid-template-columns: repeat(2, 1fr);
+
+      //last child occupies 2 columns
+      & > :last-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    &__description {
+      display: grid;
+      gap: 2rem;
+      //2 columns
+      grid-template-columns: repeat(2, 1fr);
+
+      & > :first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    &__submit {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
+    }
+  }
+}

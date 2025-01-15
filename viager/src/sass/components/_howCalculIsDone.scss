@@ -1,0 +1,63 @@
+.how {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    width: 100%;
+    text-align: center;
+    font-family: "KoHo", serif;
+  }
+
+  &__content {
+    gap: 4rem;
+    @include flex-col-center;
+
+    &__item {
+      gap: 2rem;
+      align-items: center;
+      @include flex-col-center;
+
+      &__content {
+        padding: 3rem 2rem;
+        border-radius: 1rem;
+      }
+
+      &__title {
+        text-align: center;
+      }
+
+      &__text {
+        text-align: center;
+      }
+
+      &__image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__img {
+          width: 50%;
+          height: 50%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  @include respond(tab-port) {
+    &__content {
+      align-items: start;
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+
+      &__item {
+        flex-direction: row;
+        &:nth-child(odd) {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+}

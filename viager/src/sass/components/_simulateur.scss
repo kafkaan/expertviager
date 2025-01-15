@@ -1,0 +1,77 @@
+.simulateur {
+  &__title {
+    font-family: "KoHo", serif;
+    text-align: center;
+  }
+
+  &__content {
+    @include flex-col-center;
+    gap: 5rem;
+  }
+
+  &__card__form {
+    width: 100%;
+    padding: 3rem 2rem;
+    flex: 1;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__card__result {
+    width: 100%;
+    padding: 3rem 2rem;
+    flex: 1;
+    height: auto;
+
+    &__button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+  }
+
+  &__result {
+    @include flex-col-center;
+    align-items: center;
+    border-bottom: 1px solid $color-black;
+
+    &__error {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    &__text {
+      display: flex;
+      align-items: center;
+
+      h3 {
+        flex: 0.7;
+      }
+      p {
+        flex: 0.3;
+      }
+    }
+  }
+
+  &__radios {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  @include respond(tab-port) {
+    &__content {
+      flex-direction: row;
+    }
+  }
+}
+
+

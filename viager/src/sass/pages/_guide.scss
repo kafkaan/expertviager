@@ -1,0 +1,84 @@
+.viager-guide {
+  padding: 4rem 2rem;
+
+  .viager-images {
+    .images-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      @include respond(phone) {
+        flex-direction: row;
+      }
+
+      .image-item {
+        flex: 1;
+        text-align: center;
+
+        .image {
+          max-width: 100%;
+          height: 20rem;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+
+  .viager-definitions {
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      li {
+        strong {
+          color: #8b5e34;
+        }
+      }
+    }
+  }
+
+  .viager-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 3rem;
+
+    @include respond(phone) {
+      flex-direction: row;
+    }
+
+    div {
+      text-align: center;
+
+      .home-image {
+        max-width: 100%;
+        height: 40rem;
+      }
+    }
+  }
+
+  .viager-financials {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: start;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      &__icon {
+        width: 15rem;
+      }
+    }
+  }
+}
+
+.guide-card {
+  padding: 1rem;
+}
