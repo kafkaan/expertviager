@@ -1,84 +1,183 @@
-.viager-guide {
-  padding: 4rem 2rem;
-
-  .viager-images {
-    .images-section {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 2rem;
-
-      @include respond(phone) {
-        flex-direction: row;
-      }
-
-      .image-item {
-        flex: 1;
-        text-align: center;
-
-        .image {
-          max-width: 100%;
-          height: 20rem;
-          border-radius: 8px;
-        }
-      }
-    }
-  }
-
-  .viager-definitions {
-    ul {
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-
-      li {
-        strong {
-          color: #8b5e34;
-        }
-      }
-    }
-  }
-
-  .viager-details {
+.viager-explanation {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  
+  .explanation-card {
+    background: white;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 3rem;
-
-    @include respond(phone) {
-      flex-direction: row;
+    gap: 1.5rem;
+    
+    h1, h2, h3, h4 {
+      color: #333;
     }
-
-    div {
-      text-align: center;
-
-      .home-image {
-        max-width: 100%;
-        height: 40rem;
+    
+    .title-lg {
+      margin-bottom: 1rem;
+    }
+    
+    .title-md {
+      margin-bottom: 0.8rem;
+    }
+    
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .text {
+      line-height: 1.6;
+      color: #444;
+    }
+    
+    .btn {
+      align-self: center;
+      margin-top: 1rem;
+      
+      &--brown {
+        background-color: $brown-primary;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        
+        &:hover {
+          background-color: darken($brown-primary, 10%);
+        }
       }
     }
   }
 
-  .viager-financials {
+  .video-section {
+    background: white;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+    .title-lg {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    .video-player {
+      width: 100%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    .video-container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      
+      iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      }
+      
+      .video-caption {
+        margin-top: 1rem;
+        font-style: italic;
+        color: #666;
+      }
+    }
+  }
+  
+  .advantages-container, .precautions-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-items: start;
-
-    &__item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-
-      &__icon {
-        width: 15rem;
+    
+    @media (min-width: 768px) {
+      flex-direction: row;
+      
+      .advantages-column, .precautions-column {
+        flex: 1;
       }
     }
   }
-}
-
-.guide-card {
-  padding: 1rem;
+  
+  .comparison-table {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      
+      th, td {
+        border: 1px solid #ddd;
+        padding: 0.8rem;
+        text-align: left;
+      }
+      
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+    }
+  }
+  
+  .viager-type {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  .calculation-comparison {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    
+    @media (min-width: 768px) {
+      flex-direction: row;
+      
+      .calculation-box {
+        flex: 1;
+        padding: 1.5rem;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        
+        h4 {
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+  
+  .myth-box {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid $brown-primary;
+    margin: 1.5rem 0;
+    
+    h3 {
+      color: $brown-primary;
+    }
+  }
 }

@@ -18,14 +18,14 @@ export default function Hero() {
       <div className="hero__content">
         <h1 className="hero__title title-xl">
           <span className="hero__title--highlight title-xl--highlight">
-            Simulateur de vente en viager
+            Calculatrice de vente
           </span>{" "}
           en viager
         </h1>
         <p className="hero__text text">
-        Obtenez une estimation précise de votre viager. 
-        Reconnu par les professionnels, vous obtiendrez un résultat immédiat 
-        et fiable pour réaliser vos projets.
+        Évaluez le bouquet et de la rente viagère que vous pourriez
+        obtenir. Conforme aux pratiques des notaires de France, notre calculatrice vous aide à
+        construire votre projet de vente en viager.
 
         </p>
         <div className="hero__buttons">

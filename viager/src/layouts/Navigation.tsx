@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../public/logo-3-removebg-preview.png";
 
 interface CirclePosition {
@@ -8,6 +8,9 @@ interface CirclePosition {
 }
 
 const NavigationBar = () => {
+
+  const navigate = useNavigate(); // Hook pour la navigation
+
   const [circlePosition, setCirclePosition] = useState<CirclePosition>({
     top: 0,
     left: 0,
@@ -68,13 +71,13 @@ const NavigationBar = () => {
   return (
     <section className="navigation">
       <div className="navigation__mobile">
-        <div className="navigation__mobile__logo">
+        <div onClick={() => navigate("/")} className="navigation__mobile__logo">
           <img
             src={logo}
             alt="logo"
             className="navigation__mobile__logo__img"
           />
-          <h3 className="logo-text">L'Expert Viager</h3>
+          <h3 onClick={() => navigate("/")} className="logo-text">L'Expert Viager</h3>
         </div>
 
         <input
@@ -113,7 +116,7 @@ const NavigationBar = () => {
       </div>
 
       <div className="navigation__desktop">
-        <div className="navigation__desktop__logo">
+        <div onClick={() => navigate("/")} className="navigation__desktop__logo">
           <img
             src={logo}
             alt="logo"

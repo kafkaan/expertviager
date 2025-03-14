@@ -171,7 +171,7 @@ export default function Simulateur() {
   return (
     <section className="simulateur" id="simulateur">
       <div className="simulateur__title title-xl">
-        <h2>Simulateur de vente en viager</h2>
+        <h2>Calculatrice de vente en viager</h2>
       </div>
       <div className="simulateur__content margin-top-sm">
         <div className="simulateur__card__form card">

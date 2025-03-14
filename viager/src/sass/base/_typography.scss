@@ -20,6 +20,7 @@ body {
   font-size: 4rem;
   color: $color-black;
   font-weight: bold;
+  text-align: center;
 
   &--highlight {
     color: $brown-primary;
@@ -31,6 +32,7 @@ body {
   font-size: 3rem;
   color: $color-black;
   font-weight: bold;
+  text-align: center;
 
   &--brown {
     color: $brown-primary;
@@ -56,4 +58,5 @@ body {
   font-size: 1.8rem;
   color: $color-black;
   font-weight: 500;
+  
 }
